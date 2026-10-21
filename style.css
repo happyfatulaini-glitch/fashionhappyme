@@ -1,0 +1,220 @@
+
+/* Pengaturan dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f6ff;
+    color: #29243b;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: white;
+}
+
+header h1 {
+    font-size: 32px;
+    color: #6338b5;
+}
+
+header h1 span {
+    color: #ed5ca8;
+}
+
+header p {
+    color: #777;
+}
+
+/* Navigasi */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px;
+    background-color: #6338b5;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffc5e3;
+}
+
+/* Bagian utama */
+.hero {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    padding: 50px 8%;
+    background: linear-gradient(120deg, #e8d8ff, #ffe0f0);
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.label {
+    color: #7b42c2;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+}
+
+.tombol {
+    display: inline-block;
+    background-color: #6338b5;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.tombol:hover {
+    background-color: #ed5ca8;
+}
+
+/* Galeri */
+.galeri {
+    padding: 50px 7%;
+    text-align: center;
+}
+
+.galeri h2,
+.tentang h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.deskripsi {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Susunan kartu foto */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: left;
+}
+
+/* Kartu galeri */
+.kartu {
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px #dcd4e8;
+    transition: transform 0.3s;
+}
+
+.kartu:hover {
+    transform: translateY(-7px);
+}
+
+.kartu img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.info {
+    padding: 18px;
+}
+
+.info span {
+    color: #a04bd3;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.info h3 {
+    margin: 7px 0;
+}
+
+.info p {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Tentang */
+.tentang {
+    text-align: center;
+    padding: 40px 10%;
+    background-color: #eee6ff;
+}
+
+.tentang p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #655c72;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #6338b5;
+    color: white;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .kartu img {
+        height: 190px;
+    }
+}
+
+/* Tampilan HP kecil */
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 40px 7%;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+  }
